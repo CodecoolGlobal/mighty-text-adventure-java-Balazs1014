@@ -12,10 +12,12 @@ public  class Inventory {
     }
 
     public void removeFromInventory(Items item) {
+
         player.inventory.remove(item);
     }
 
     public void addToInventory(Items item) {
+
         player.inventory.add(item);
     }
 }

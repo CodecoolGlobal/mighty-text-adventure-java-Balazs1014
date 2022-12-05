@@ -6,4 +6,5 @@ public class Player {
     public String name;
     public List<Items> inventory;
     public Area currentArea;
+    public int points;
 }
