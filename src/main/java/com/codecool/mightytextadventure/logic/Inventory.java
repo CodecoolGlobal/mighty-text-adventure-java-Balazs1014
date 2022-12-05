@@ -1,16 +1,22 @@
 package com.codecool.mightytextadventure.logic;
 
 import com.codecool.mightytextadventure.data.Items;
-
-import java.util.ArrayList;
+import com.codecool.mightytextadventure.data.Player;
 
 public  class Inventory {
+    Player player = new Player();
 
-    public ArrayList<String> manageInventory() {
-        ArrayList<String> items = new ArrayList<>();
-        items.add(String.valueOf(Items.LAPTOP));
-        items.add(String.valueOf(Items.NOOBNESS));
+    public void initializeInventoryOnCharacterCreation() {
+        player.inventory.add(Items.LAPTOP);
+        player.inventory.add(Items.NOOBNESS);
+    }
 
-        return items;
+    public void removeFromInventory(Items item) {
+        player.inventory.remove(item);
+    }
+
+    public void addToInventory(Items item) {
+        player.inventory.add(item);
     }
 }
+
