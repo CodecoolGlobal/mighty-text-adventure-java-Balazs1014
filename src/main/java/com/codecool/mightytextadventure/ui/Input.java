@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Input {
 
     public String getInputFromUser(){
-        return "";
+        Scanner characterName = new Scanner(System.in);
+        String name = characterName.nextLine();
+        return name;
     }
 
 }
