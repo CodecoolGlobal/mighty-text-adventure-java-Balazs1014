@@ -6,8 +6,7 @@ public class Input {
 
     public String getInputFromUser(){
         Scanner characterName = new Scanner(System.in);
-        String input = characterName.nextLine();
-        return input;
+        String name = characterName.nextLine();
+        return name;
     }
-
 }
