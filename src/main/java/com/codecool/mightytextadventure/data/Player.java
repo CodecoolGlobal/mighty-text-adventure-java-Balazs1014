@@ -42,4 +42,8 @@ public class Player {
         Player player = new Player(name, area);
         player.setName(input.getName());
     }
+
+    public String getName() {
+        return name;
+    }
 }
