@@ -19,8 +19,8 @@ public class Player {
         this.name = name;
         this.currentArea = currentArea;
 
-        inventory.add(Items.LAPTOP);
-        inventory.add(Items.NOOBNESS);
+        //inventory.add(Items.LAPTOP);
+        //inventory.add(Items.NOOBNESS);
         points = 0;
 
         Application application = new Application();

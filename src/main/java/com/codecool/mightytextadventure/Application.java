@@ -1,7 +1,10 @@
 package com.codecool.mightytextadventure;
 
 import com.codecool.mightytextadventure.data.Area;
+import com.codecool.mightytextadventure.data.Player;
 import com.codecool.mightytextadventure.logic.Game;
+import com.codecool.mightytextadventure.logic.GenerateQuestion;
+import com.codecool.mightytextadventure.room.StartRoomManager;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
@@ -9,8 +12,17 @@ public class Application {
     public static void main(String[] args) {
         Display display = new Display();
         Input input = new Input();
+        StartRoomManager startRoomManager = new StartRoomManager();
 
         display.printMessage("Starting Mighty Text Adventure!");
+        startRoomManager.StartRoomTextOutputHandler("Please input your name: ");
+        Area area = new Area("Room 1");
+        Player player = new Player(input.getNameFromUser(),area);
+        startRoomManager.StartRoomTextOutputHandler(player.getName());
+        GenerateQuestion generateQuestion = new GenerateQuestion();
+        startRoomManager.StartRoomTextOutputHandler(generateQuestion.question());
+        startRoomManager.InputPlayerName();
+
 
         Area[] areas = loadAreas();
 
