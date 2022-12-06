@@ -1,6 +1,6 @@
 package com.codecool.mightytextadventure.data;
 
-public enum choices {
+public enum Choices {
     QUIT,
     TRYHARD,
     GODMODE
