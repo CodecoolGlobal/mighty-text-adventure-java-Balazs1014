@@ -7,5 +7,6 @@ public enum Items {
     TISSUE,
     METAL_ACCESS_KEY,
     THIRD_EYE,
-    MASTER_KEY
+    MASTER_KEY;
+
 }

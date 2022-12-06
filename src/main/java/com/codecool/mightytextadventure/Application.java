@@ -20,7 +20,7 @@ public class Application {
         display.printMessage("Exiting from Mighty Text Adventure!");
     }
 
-    private static Area[] loadAreas(){
+    public static Area[] loadAreas(){
         Area[] areas =   new Area[7];
         areas[0] = new Area("Start room");
         areas[1] = new Area("Room 1");
