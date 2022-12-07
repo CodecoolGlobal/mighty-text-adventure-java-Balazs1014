@@ -1,5 +1,6 @@
 package com.codecool.mightytextadventure.ui;
-import com.codecool.mightytextadventure.logic.Validator;
+import com.codecool.mightytextadventure.logic.AnswerValidator;
+import com.codecool.mightytextadventure.logic.NameValidator;
 
 import java.util.Scanner;
 
@@ -15,10 +16,18 @@ public class Input {
         return name;
     }
 
+
     public String getNameFromUser(){
         Scanner characterName = new Scanner(System.in);
         setName(characterName.nextLine());
-        Validator validator = new Validator();
+        NameValidator validator = new NameValidator();
         return validator.validate(name) ?  name : getNameFromUser();
     }
+
+    public boolean getAnswerFromUser(String answer){
+        Scanner scanner = new Scanner(System.in);
+        String playerinput = scanner.nextLine();
+        return playerinput.toLowerCase().equals(answer.toLowerCase());
+    }
+
 }

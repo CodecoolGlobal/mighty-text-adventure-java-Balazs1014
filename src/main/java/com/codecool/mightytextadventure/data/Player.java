@@ -38,9 +38,7 @@ public class Player {
 
     public void setPlayerName(String name) {
         Input input = new Input();
-        Area area = new Area("Start Room");
-        Player player = new Player(name, area);
-        player.setName(input.getName());
+        this.name = input.getName();
     }
 
     public String getName() {
