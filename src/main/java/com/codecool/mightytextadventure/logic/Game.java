@@ -10,6 +10,8 @@ public class Game {
     private final Input input;
     private final Display display;
 
+    int score = 1000;
+
     public Game(Area[] areas, Input input, Display display) {
         this.areas = areas;
         this.input = input;
@@ -27,29 +29,34 @@ public class Game {
             if(test){
                 for(int i = 0; i < areas.length; i++) {
                     if(areas[i].equals(player.currentArea)) {
-                        if(i + 1 >= areas.length){
+                        if(triesLeft > 0 && i + 1 >= areas.length){
                             isRunning = false;
+                            display.printMessage("You won!");
+                            display.printMessage("Your score is: " + String.valueOf(score));
                         }
                         else{
                             player.currentArea = areas[i + 1];
+                            score += i * 1000;
+                            display.printMessage(String.valueOf(score));
                             isRunning = step();
                         }
                         break;
                     }
                 }
-            } else {
+            }
+            else {
                 triesLeft--;
                 display.printMessage("I am sure you are smarter than this, let's try again! you have " + triesLeft + " tries left!");
             }
             if (triesLeft == 0) {
                 isRunning = false;
                 display.printMessage("No cookies for you! You died...");
+                display.printMessage("Your score is: " + String.valueOf(score));
             }
         }
     }
 
     private boolean step() {
-        display.printMessage("Steps");
         return true;
     }
 }

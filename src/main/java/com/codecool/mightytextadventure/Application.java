@@ -1,15 +1,12 @@
 package com.codecool.mightytextadventure;
 
 import com.codecool.mightytextadventure.data.Area;
-import com.codecool.mightytextadventure.data.Player;
 import com.codecool.mightytextadventure.data.Question;
 import com.codecool.mightytextadventure.logic.Game;
-import com.codecool.mightytextadventure.logic.GenerateQuestion;
 import com.codecool.mightytextadventure.room.StartRoomManager;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Application {
@@ -26,7 +23,6 @@ public class Application {
 
         Game game = new Game(areas, input, display);
         game.run();
-
         display.printMessage("Exiting from Mighty Text Adventure!");
     }
 
