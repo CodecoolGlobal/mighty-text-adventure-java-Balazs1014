@@ -26,12 +26,11 @@ public class Game {
             if(test){
                 for(int i = 0; i < areas.length; i++) {
                     if(areas[i].equals(player.currentArea)) {
-                        if(i+1 >= areas.length){
-                            display.printMessage("BELEFUT");
+                        if(i + 1 >= areas.length){
                             isRunning = false;
                         }
                         else{
-                            player.currentArea = areas[i+1];
+                            player.currentArea = areas[i + 1];
                             isRunning = step();
                         }
                         break;

@@ -1,5 +1,4 @@
 package com.codecool.mightytextadventure.ui;
-import com.codecool.mightytextadventure.logic.AnswerValidator;
 import com.codecool.mightytextadventure.logic.NameValidator;
 
 import java.util.Scanner;
@@ -19,9 +18,15 @@ public class Input {
 
     public String getNameFromUser(){
         Scanner characterName = new Scanner(System.in);
+        Display display = new Display();
         setName(characterName.nextLine());
         NameValidator validator = new NameValidator();
-        return validator.validate(name) ?  name : getNameFromUser();
+        if (validator.validate(name)) {
+            return name;
+        } else {
+            display.printMessage("Name should consist of a minimum of 3 characters and a maximum of 16.");
+            return getNameFromUser();
+        }
     }
 
     public boolean getAnswerFromUser(String answer){
