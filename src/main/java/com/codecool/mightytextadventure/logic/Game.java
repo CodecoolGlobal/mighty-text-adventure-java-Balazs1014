@@ -17,6 +17,7 @@ public class Game {
     }
 
     public void run() {
+        int triesLeft = 3;
         boolean isRunning = true;
         Player player = new Player(input.getNameFromUser(),areas[0]);
         while (isRunning) {
@@ -36,6 +37,13 @@ public class Game {
                         break;
                     }
                 }
+            } else {
+                triesLeft--;
+                display.printMessage("I am sure you are smarter than this, let's try again! you have " + triesLeft + " tries left!");
+            }
+            if (triesLeft == 0) {
+                isRunning = false;
+                display.printMessage("No cookies for you! You died...");
             }
         }
     }
