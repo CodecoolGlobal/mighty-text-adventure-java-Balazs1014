@@ -3,7 +3,6 @@ package com.codecool.mightytextadventure;
 import com.codecool.mightytextadventure.data.Area;
 import com.codecool.mightytextadventure.data.Question;
 import com.codecool.mightytextadventure.logic.Game;
-import com.codecool.mightytextadventure.room.StartRoomManager;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
@@ -13,10 +12,9 @@ public class Application {
     public static void main(String[] args) {
         Display display = new Display();
         Input input = new Input();
-        StartRoomManager startRoomManager = new StartRoomManager();
 
         display.printMessage("Starting Mighty Text Adventure!");
-        startRoomManager.StartRoomTextOutputHandler("Please input your name (min. 3 characters, max 16 characters): ");
+        display.printMessage("Please input your name (min. 3 characters, max 16 characters): ");
 
 
         Area[] areas = loadAreas();
