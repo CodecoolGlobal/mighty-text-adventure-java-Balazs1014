@@ -29,7 +29,7 @@ public class Application {
         areas[0] = new Area("Start room", List.of(new Question("How much is 16 * 4?", "64")));
         areas[1] = new Area("Room 1", List.of(new Question("How much is 594 / 6", "99")));
         areas[2] = new Area("Room 2", List.of(new Question("How many megabytes are in a gigabyte?", "1024")));
-        areas[3] = new Area("Room 3", List.of(new Question("Which was the first language which implemented true OOP rules?", "Simula")));
+        areas[3] = new Area("Room 3", List.of(new Question("Which was the first object orientated programming language?", "Simula")));
         areas[4] = new Area("Room 4", List.of(new Question("What does MERN stand for", "mongodb, express, react, nodejs")));
         areas[5] = new Area("Room 5", List.of(new Question("What powers a developer?", "coffee")));
         areas[6] = new Area("Room 6", List.of(new Question("What was Java originally called?", "Oak")));
