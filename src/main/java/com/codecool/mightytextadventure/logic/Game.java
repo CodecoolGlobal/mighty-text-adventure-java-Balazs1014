@@ -2,6 +2,7 @@ package com.codecool.mightytextadventure.logic;
 
 import com.codecool.mightytextadventure.data.Area;
 import com.codecool.mightytextadventure.data.Player;
+import com.codecool.mightytextadventure.data.Reward;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
@@ -19,6 +20,7 @@ public class Game {
     }
 
     public void run() {
+        Reward reward = new Reward();
         String ANSI_RED_BACKGROUND = "\u001B[41m";
         String ANSI_RESET = "\u001B[0m";
         int triesLeft = 3;
@@ -35,6 +37,7 @@ public class Game {
                             isRunning = false;
                             display.printMessage("You won!");
                             display.printMessage("Your final score is: " + String.valueOf(score));
+                            display.printMessage(reward.reward);
                         }
                         else{
                             player.currentArea = areas[i + 1];
